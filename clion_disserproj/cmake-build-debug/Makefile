@@ -123,32 +123,140 @@ clion_disserproj/fast:
 	$(MAKE) -f CMakeFiles/clion_disserproj.dir/build.make CMakeFiles/clion_disserproj.dir/build
 .PHONY : clion_disserproj/fast
 
-main.o: main.c.o
+src/allignment.o: src/allignment.c.o
 
-.PHONY : main.o
+.PHONY : src/allignment.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/clion_disserproj.dir/build.make CMakeFiles/clion_disserproj.dir/main.c.o
-.PHONY : main.c.o
+src/allignment.c.o:
+	$(MAKE) -f CMakeFiles/clion_disserproj.dir/build.make CMakeFiles/clion_disserproj.dir/src/allignment.c.o
+.PHONY : src/allignment.c.o
 
-main.i: main.c.i
+src/allignment.i: src/allignment.c.i
 
-.PHONY : main.i
+.PHONY : src/allignment.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/clion_disserproj.dir/build.make CMakeFiles/clion_disserproj.dir/main.c.i
-.PHONY : main.c.i
+src/allignment.c.i:
+	$(MAKE) -f CMakeFiles/clion_disserproj.dir/build.make CMakeFiles/clion_disserproj.dir/src/allignment.c.i
+.PHONY : src/allignment.c.i
 
-main.s: main.c.s
+src/allignment.s: src/allignment.c.s
 
-.PHONY : main.s
+.PHONY : src/allignment.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/clion_disserproj.dir/build.make CMakeFiles/clion_disserproj.dir/main.c.s
-.PHONY : main.c.s
+src/allignment.c.s:
+	$(MAKE) -f CMakeFiles/clion_disserproj.dir/build.make CMakeFiles/clion_disserproj.dir/src/allignment.c.s
+.PHONY : src/allignment.c.s
+
+src/fitnessCalculation.o: src/fitnessCalculation.c.o
+
+.PHONY : src/fitnessCalculation.o
+
+# target to build an object file
+src/fitnessCalculation.c.o:
+	$(MAKE) -f CMakeFiles/clion_disserproj.dir/build.make CMakeFiles/clion_disserproj.dir/src/fitnessCalculation.c.o
+.PHONY : src/fitnessCalculation.c.o
+
+src/fitnessCalculation.i: src/fitnessCalculation.c.i
+
+.PHONY : src/fitnessCalculation.i
+
+# target to preprocess a source file
+src/fitnessCalculation.c.i:
+	$(MAKE) -f CMakeFiles/clion_disserproj.dir/build.make CMakeFiles/clion_disserproj.dir/src/fitnessCalculation.c.i
+.PHONY : src/fitnessCalculation.c.i
+
+src/fitnessCalculation.s: src/fitnessCalculation.c.s
+
+.PHONY : src/fitnessCalculation.s
+
+# target to generate assembly for a file
+src/fitnessCalculation.c.s:
+	$(MAKE) -f CMakeFiles/clion_disserproj.dir/build.make CMakeFiles/clion_disserproj.dir/src/fitnessCalculation.c.s
+.PHONY : src/fitnessCalculation.c.s
+
+src/initialization.o: src/initialization.c.o
+
+.PHONY : src/initialization.o
+
+# target to build an object file
+src/initialization.c.o:
+	$(MAKE) -f CMakeFiles/clion_disserproj.dir/build.make CMakeFiles/clion_disserproj.dir/src/initialization.c.o
+.PHONY : src/initialization.c.o
+
+src/initialization.i: src/initialization.c.i
+
+.PHONY : src/initialization.i
+
+# target to preprocess a source file
+src/initialization.c.i:
+	$(MAKE) -f CMakeFiles/clion_disserproj.dir/build.make CMakeFiles/clion_disserproj.dir/src/initialization.c.i
+.PHONY : src/initialization.c.i
+
+src/initialization.s: src/initialization.c.s
+
+.PHONY : src/initialization.s
+
+# target to generate assembly for a file
+src/initialization.c.s:
+	$(MAKE) -f CMakeFiles/clion_disserproj.dir/build.make CMakeFiles/clion_disserproj.dir/src/initialization.c.s
+.PHONY : src/initialization.c.s
+
+src/main.o: src/main.c.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.c.o:
+	$(MAKE) -f CMakeFiles/clion_disserproj.dir/build.make CMakeFiles/clion_disserproj.dir/src/main.c.o
+.PHONY : src/main.c.o
+
+src/main.i: src/main.c.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.c.i:
+	$(MAKE) -f CMakeFiles/clion_disserproj.dir/build.make CMakeFiles/clion_disserproj.dir/src/main.c.i
+.PHONY : src/main.c.i
+
+src/main.s: src/main.c.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.c.s:
+	$(MAKE) -f CMakeFiles/clion_disserproj.dir/build.make CMakeFiles/clion_disserproj.dir/src/main.c.s
+.PHONY : src/main.c.s
+
+src/modification.o: src/modification.c.o
+
+.PHONY : src/modification.o
+
+# target to build an object file
+src/modification.c.o:
+	$(MAKE) -f CMakeFiles/clion_disserproj.dir/build.make CMakeFiles/clion_disserproj.dir/src/modification.c.o
+.PHONY : src/modification.c.o
+
+src/modification.i: src/modification.c.i
+
+.PHONY : src/modification.i
+
+# target to preprocess a source file
+src/modification.c.i:
+	$(MAKE) -f CMakeFiles/clion_disserproj.dir/build.make CMakeFiles/clion_disserproj.dir/src/modification.c.i
+.PHONY : src/modification.c.i
+
+src/modification.s: src/modification.c.s
+
+.PHONY : src/modification.s
+
+# target to generate assembly for a file
+src/modification.c.s:
+	$(MAKE) -f CMakeFiles/clion_disserproj.dir/build.make CMakeFiles/clion_disserproj.dir/src/modification.c.s
+.PHONY : src/modification.c.s
 
 # Help Target
 help:
@@ -159,9 +267,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... clion_disserproj"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/allignment.o"
+	@echo "... src/allignment.i"
+	@echo "... src/allignment.s"
+	@echo "... src/fitnessCalculation.o"
+	@echo "... src/fitnessCalculation.i"
+	@echo "... src/fitnessCalculation.s"
+	@echo "... src/initialization.o"
+	@echo "... src/initialization.i"
+	@echo "... src/initialization.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/modification.o"
+	@echo "... src/modification.i"
+	@echo "... src/modification.s"
 .PHONY : help
 
 

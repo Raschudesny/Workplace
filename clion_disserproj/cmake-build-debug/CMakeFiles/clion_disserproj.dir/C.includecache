@@ -6,7 +6,41 @@
 
 #IncludeRegexTransform: 
 
-/home/raschudesny/workplace/disser/clion_disserproj/main.c
+/home/raschudesny/workplace/disser/clion_disserproj/headers/allignment.h
+initialization.h
+/home/raschudesny/workplace/disser/clion_disserproj/headers/initialization.h
+modification.h
+/home/raschudesny/workplace/disser/clion_disserproj/headers/modification.h
+fitnessCalculation.h
+/home/raschudesny/workplace/disser/clion_disserproj/headers/fitnessCalculation.h
+
+/home/raschudesny/workplace/disser/clion_disserproj/headers/fitnessCalculation.h
+
+/home/raschudesny/workplace/disser/clion_disserproj/headers/initialization.h
+
+/home/raschudesny/workplace/disser/clion_disserproj/headers/modification.h
+
+/home/raschudesny/workplace/disser/clion_disserproj/src/allignment.c
+../headers/allignment.h
+/home/raschudesny/workplace/disser/clion_disserproj/headers/allignment.h
+
+/home/raschudesny/workplace/disser/clion_disserproj/src/fitnessCalculation.c
+../headers/fitnessCalculation.h
+/home/raschudesny/workplace/disser/clion_disserproj/headers/fitnessCalculation.h
+
+/home/raschudesny/workplace/disser/clion_disserproj/src/initialization.c
+../headers/initialization.h
+/home/raschudesny/workplace/disser/clion_disserproj/headers/initialization.h
+
+/home/raschudesny/workplace/disser/clion_disserproj/src/main.c
 stdio.h
 -
+stdlib.h
+-
+../headers/allignment.h
+/home/raschudesny/workplace/disser/clion_disserproj/headers/allignment.h
+
+/home/raschudesny/workplace/disser/clion_disserproj/src/modification.c
+../headers/modification.h
+/home/raschudesny/workplace/disser/clion_disserproj/headers/modification.h
 

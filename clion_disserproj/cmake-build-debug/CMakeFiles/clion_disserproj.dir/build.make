@@ -57,41 +57,145 @@ include CMakeFiles/clion_disserproj.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/clion_disserproj.dir/flags.make
 
-CMakeFiles/clion_disserproj.dir/main.c.o: CMakeFiles/clion_disserproj.dir/flags.make
-CMakeFiles/clion_disserproj.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/raschudesny/workplace/disser/clion_disserproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/clion_disserproj.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/clion_disserproj.dir/main.c.o   -c /home/raschudesny/workplace/disser/clion_disserproj/main.c
+CMakeFiles/clion_disserproj.dir/src/main.c.o: CMakeFiles/clion_disserproj.dir/flags.make
+CMakeFiles/clion_disserproj.dir/src/main.c.o: ../src/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/raschudesny/workplace/disser/clion_disserproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/clion_disserproj.dir/src/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/clion_disserproj.dir/src/main.c.o   -c /home/raschudesny/workplace/disser/clion_disserproj/src/main.c
 
-CMakeFiles/clion_disserproj.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/clion_disserproj.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/raschudesny/workplace/disser/clion_disserproj/main.c > CMakeFiles/clion_disserproj.dir/main.c.i
+CMakeFiles/clion_disserproj.dir/src/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/clion_disserproj.dir/src/main.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/raschudesny/workplace/disser/clion_disserproj/src/main.c > CMakeFiles/clion_disserproj.dir/src/main.c.i
 
-CMakeFiles/clion_disserproj.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/clion_disserproj.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/raschudesny/workplace/disser/clion_disserproj/main.c -o CMakeFiles/clion_disserproj.dir/main.c.s
+CMakeFiles/clion_disserproj.dir/src/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/clion_disserproj.dir/src/main.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/raschudesny/workplace/disser/clion_disserproj/src/main.c -o CMakeFiles/clion_disserproj.dir/src/main.c.s
 
-CMakeFiles/clion_disserproj.dir/main.c.o.requires:
+CMakeFiles/clion_disserproj.dir/src/main.c.o.requires:
 
-.PHONY : CMakeFiles/clion_disserproj.dir/main.c.o.requires
+.PHONY : CMakeFiles/clion_disserproj.dir/src/main.c.o.requires
 
-CMakeFiles/clion_disserproj.dir/main.c.o.provides: CMakeFiles/clion_disserproj.dir/main.c.o.requires
-	$(MAKE) -f CMakeFiles/clion_disserproj.dir/build.make CMakeFiles/clion_disserproj.dir/main.c.o.provides.build
-.PHONY : CMakeFiles/clion_disserproj.dir/main.c.o.provides
+CMakeFiles/clion_disserproj.dir/src/main.c.o.provides: CMakeFiles/clion_disserproj.dir/src/main.c.o.requires
+	$(MAKE) -f CMakeFiles/clion_disserproj.dir/build.make CMakeFiles/clion_disserproj.dir/src/main.c.o.provides.build
+.PHONY : CMakeFiles/clion_disserproj.dir/src/main.c.o.provides
 
-CMakeFiles/clion_disserproj.dir/main.c.o.provides.build: CMakeFiles/clion_disserproj.dir/main.c.o
+CMakeFiles/clion_disserproj.dir/src/main.c.o.provides.build: CMakeFiles/clion_disserproj.dir/src/main.c.o
+
+
+CMakeFiles/clion_disserproj.dir/src/allignment.c.o: CMakeFiles/clion_disserproj.dir/flags.make
+CMakeFiles/clion_disserproj.dir/src/allignment.c.o: ../src/allignment.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/raschudesny/workplace/disser/clion_disserproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/clion_disserproj.dir/src/allignment.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/clion_disserproj.dir/src/allignment.c.o   -c /home/raschudesny/workplace/disser/clion_disserproj/src/allignment.c
+
+CMakeFiles/clion_disserproj.dir/src/allignment.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/clion_disserproj.dir/src/allignment.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/raschudesny/workplace/disser/clion_disserproj/src/allignment.c > CMakeFiles/clion_disserproj.dir/src/allignment.c.i
+
+CMakeFiles/clion_disserproj.dir/src/allignment.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/clion_disserproj.dir/src/allignment.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/raschudesny/workplace/disser/clion_disserproj/src/allignment.c -o CMakeFiles/clion_disserproj.dir/src/allignment.c.s
+
+CMakeFiles/clion_disserproj.dir/src/allignment.c.o.requires:
+
+.PHONY : CMakeFiles/clion_disserproj.dir/src/allignment.c.o.requires
+
+CMakeFiles/clion_disserproj.dir/src/allignment.c.o.provides: CMakeFiles/clion_disserproj.dir/src/allignment.c.o.requires
+	$(MAKE) -f CMakeFiles/clion_disserproj.dir/build.make CMakeFiles/clion_disserproj.dir/src/allignment.c.o.provides.build
+.PHONY : CMakeFiles/clion_disserproj.dir/src/allignment.c.o.provides
+
+CMakeFiles/clion_disserproj.dir/src/allignment.c.o.provides.build: CMakeFiles/clion_disserproj.dir/src/allignment.c.o
+
+
+CMakeFiles/clion_disserproj.dir/src/initialization.c.o: CMakeFiles/clion_disserproj.dir/flags.make
+CMakeFiles/clion_disserproj.dir/src/initialization.c.o: ../src/initialization.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/raschudesny/workplace/disser/clion_disserproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/clion_disserproj.dir/src/initialization.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/clion_disserproj.dir/src/initialization.c.o   -c /home/raschudesny/workplace/disser/clion_disserproj/src/initialization.c
+
+CMakeFiles/clion_disserproj.dir/src/initialization.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/clion_disserproj.dir/src/initialization.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/raschudesny/workplace/disser/clion_disserproj/src/initialization.c > CMakeFiles/clion_disserproj.dir/src/initialization.c.i
+
+CMakeFiles/clion_disserproj.dir/src/initialization.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/clion_disserproj.dir/src/initialization.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/raschudesny/workplace/disser/clion_disserproj/src/initialization.c -o CMakeFiles/clion_disserproj.dir/src/initialization.c.s
+
+CMakeFiles/clion_disserproj.dir/src/initialization.c.o.requires:
+
+.PHONY : CMakeFiles/clion_disserproj.dir/src/initialization.c.o.requires
+
+CMakeFiles/clion_disserproj.dir/src/initialization.c.o.provides: CMakeFiles/clion_disserproj.dir/src/initialization.c.o.requires
+	$(MAKE) -f CMakeFiles/clion_disserproj.dir/build.make CMakeFiles/clion_disserproj.dir/src/initialization.c.o.provides.build
+.PHONY : CMakeFiles/clion_disserproj.dir/src/initialization.c.o.provides
+
+CMakeFiles/clion_disserproj.dir/src/initialization.c.o.provides.build: CMakeFiles/clion_disserproj.dir/src/initialization.c.o
+
+
+CMakeFiles/clion_disserproj.dir/src/modification.c.o: CMakeFiles/clion_disserproj.dir/flags.make
+CMakeFiles/clion_disserproj.dir/src/modification.c.o: ../src/modification.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/raschudesny/workplace/disser/clion_disserproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/clion_disserproj.dir/src/modification.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/clion_disserproj.dir/src/modification.c.o   -c /home/raschudesny/workplace/disser/clion_disserproj/src/modification.c
+
+CMakeFiles/clion_disserproj.dir/src/modification.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/clion_disserproj.dir/src/modification.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/raschudesny/workplace/disser/clion_disserproj/src/modification.c > CMakeFiles/clion_disserproj.dir/src/modification.c.i
+
+CMakeFiles/clion_disserproj.dir/src/modification.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/clion_disserproj.dir/src/modification.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/raschudesny/workplace/disser/clion_disserproj/src/modification.c -o CMakeFiles/clion_disserproj.dir/src/modification.c.s
+
+CMakeFiles/clion_disserproj.dir/src/modification.c.o.requires:
+
+.PHONY : CMakeFiles/clion_disserproj.dir/src/modification.c.o.requires
+
+CMakeFiles/clion_disserproj.dir/src/modification.c.o.provides: CMakeFiles/clion_disserproj.dir/src/modification.c.o.requires
+	$(MAKE) -f CMakeFiles/clion_disserproj.dir/build.make CMakeFiles/clion_disserproj.dir/src/modification.c.o.provides.build
+.PHONY : CMakeFiles/clion_disserproj.dir/src/modification.c.o.provides
+
+CMakeFiles/clion_disserproj.dir/src/modification.c.o.provides.build: CMakeFiles/clion_disserproj.dir/src/modification.c.o
+
+
+CMakeFiles/clion_disserproj.dir/src/fitnessCalculation.c.o: CMakeFiles/clion_disserproj.dir/flags.make
+CMakeFiles/clion_disserproj.dir/src/fitnessCalculation.c.o: ../src/fitnessCalculation.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/raschudesny/workplace/disser/clion_disserproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/clion_disserproj.dir/src/fitnessCalculation.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/clion_disserproj.dir/src/fitnessCalculation.c.o   -c /home/raschudesny/workplace/disser/clion_disserproj/src/fitnessCalculation.c
+
+CMakeFiles/clion_disserproj.dir/src/fitnessCalculation.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/clion_disserproj.dir/src/fitnessCalculation.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/raschudesny/workplace/disser/clion_disserproj/src/fitnessCalculation.c > CMakeFiles/clion_disserproj.dir/src/fitnessCalculation.c.i
+
+CMakeFiles/clion_disserproj.dir/src/fitnessCalculation.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/clion_disserproj.dir/src/fitnessCalculation.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/raschudesny/workplace/disser/clion_disserproj/src/fitnessCalculation.c -o CMakeFiles/clion_disserproj.dir/src/fitnessCalculation.c.s
+
+CMakeFiles/clion_disserproj.dir/src/fitnessCalculation.c.o.requires:
+
+.PHONY : CMakeFiles/clion_disserproj.dir/src/fitnessCalculation.c.o.requires
+
+CMakeFiles/clion_disserproj.dir/src/fitnessCalculation.c.o.provides: CMakeFiles/clion_disserproj.dir/src/fitnessCalculation.c.o.requires
+	$(MAKE) -f CMakeFiles/clion_disserproj.dir/build.make CMakeFiles/clion_disserproj.dir/src/fitnessCalculation.c.o.provides.build
+.PHONY : CMakeFiles/clion_disserproj.dir/src/fitnessCalculation.c.o.provides
+
+CMakeFiles/clion_disserproj.dir/src/fitnessCalculation.c.o.provides.build: CMakeFiles/clion_disserproj.dir/src/fitnessCalculation.c.o
 
 
 # Object files for target clion_disserproj
 clion_disserproj_OBJECTS = \
-"CMakeFiles/clion_disserproj.dir/main.c.o"
+"CMakeFiles/clion_disserproj.dir/src/main.c.o" \
+"CMakeFiles/clion_disserproj.dir/src/allignment.c.o" \
+"CMakeFiles/clion_disserproj.dir/src/initialization.c.o" \
+"CMakeFiles/clion_disserproj.dir/src/modification.c.o" \
+"CMakeFiles/clion_disserproj.dir/src/fitnessCalculation.c.o"
 
 # External object files for target clion_disserproj
 clion_disserproj_EXTERNAL_OBJECTS =
 
-clion_disserproj: CMakeFiles/clion_disserproj.dir/main.c.o
+clion_disserproj: CMakeFiles/clion_disserproj.dir/src/main.c.o
+clion_disserproj: CMakeFiles/clion_disserproj.dir/src/allignment.c.o
+clion_disserproj: CMakeFiles/clion_disserproj.dir/src/initialization.c.o
+clion_disserproj: CMakeFiles/clion_disserproj.dir/src/modification.c.o
+clion_disserproj: CMakeFiles/clion_disserproj.dir/src/fitnessCalculation.c.o
 clion_disserproj: CMakeFiles/clion_disserproj.dir/build.make
 clion_disserproj: CMakeFiles/clion_disserproj.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/raschudesny/workplace/disser/clion_disserproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable clion_disserproj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/raschudesny/workplace/disser/clion_disserproj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable clion_disserproj"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/clion_disserproj.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -99,7 +203,11 @@ CMakeFiles/clion_disserproj.dir/build: clion_disserproj
 
 .PHONY : CMakeFiles/clion_disserproj.dir/build
 
-CMakeFiles/clion_disserproj.dir/requires: CMakeFiles/clion_disserproj.dir/main.c.o.requires
+CMakeFiles/clion_disserproj.dir/requires: CMakeFiles/clion_disserproj.dir/src/main.c.o.requires
+CMakeFiles/clion_disserproj.dir/requires: CMakeFiles/clion_disserproj.dir/src/allignment.c.o.requires
+CMakeFiles/clion_disserproj.dir/requires: CMakeFiles/clion_disserproj.dir/src/initialization.c.o.requires
+CMakeFiles/clion_disserproj.dir/requires: CMakeFiles/clion_disserproj.dir/src/modification.c.o.requires
+CMakeFiles/clion_disserproj.dir/requires: CMakeFiles/clion_disserproj.dir/src/fitnessCalculation.c.o.requires
 
 .PHONY : CMakeFiles/clion_disserproj.dir/requires
 

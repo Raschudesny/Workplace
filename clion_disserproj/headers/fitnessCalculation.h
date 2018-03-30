@@ -1,0 +1,11 @@
+//
+// Created by raschudesny on 30.03.18.
+//
+
+#ifndef CLION_DISSERPROJ_FITNESSCALCULATION_H
+#define CLION_DISSERPROJ_FITNESSCALCULATION_H
+
+void calculateFitness();
+
+
+#endif //CLION_DISSERPROJ_FITNESSCALCULATION_H

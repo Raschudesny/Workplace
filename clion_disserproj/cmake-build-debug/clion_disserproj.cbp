@@ -78,7 +78,34 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/raschudesny/workplace/disser/clion_disserproj/main.c">
+		<Unit filename="/home/raschudesny/workplace/disser/clion_disserproj/headers/allignment.h">
+			<Option target="clion_disserproj"/>
+		</Unit>
+		<Unit filename="/home/raschudesny/workplace/disser/clion_disserproj/headers/fitnessCalculation.h">
+			<Option target="clion_disserproj"/>
+		</Unit>
+		<Unit filename="/home/raschudesny/workplace/disser/clion_disserproj/headers/initialization.h">
+			<Option target="clion_disserproj"/>
+		</Unit>
+		<Unit filename="/home/raschudesny/workplace/disser/clion_disserproj/headers/main.h">
+			<Option target="clion_disserproj"/>
+		</Unit>
+		<Unit filename="/home/raschudesny/workplace/disser/clion_disserproj/headers/modification.h">
+			<Option target="clion_disserproj"/>
+		</Unit>
+		<Unit filename="/home/raschudesny/workplace/disser/clion_disserproj/src/allignment.c">
+			<Option target="clion_disserproj"/>
+		</Unit>
+		<Unit filename="/home/raschudesny/workplace/disser/clion_disserproj/src/fitnessCalculation.c">
+			<Option target="clion_disserproj"/>
+		</Unit>
+		<Unit filename="/home/raschudesny/workplace/disser/clion_disserproj/src/initialization.c">
+			<Option target="clion_disserproj"/>
+		</Unit>
+		<Unit filename="/home/raschudesny/workplace/disser/clion_disserproj/src/main.c">
+			<Option target="clion_disserproj"/>
+		</Unit>
+		<Unit filename="/home/raschudesny/workplace/disser/clion_disserproj/src/modification.c">
 			<Option target="clion_disserproj"/>
 		</Unit>
 		<Unit filename="/home/raschudesny/workplace/disser/clion_disserproj/CMakeLists.txt">
