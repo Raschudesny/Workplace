@@ -7,10 +7,10 @@
 
 #include <stdlib.h>
 #include <time.h>
-#include "main.h"
+#include "allignment.h"
 
 
-int *** initializePopulation(char **);
+Organism * initializePopulation(char **, int , int );
 
 
 #endif //CLION_DISSERPROJ_INITIALIZATION_H

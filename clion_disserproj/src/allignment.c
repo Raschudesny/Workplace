@@ -4,10 +4,11 @@
 
 #include "../headers/allignment.h"
 
-void makeMultAllignGeneticAlgo(char ** sequences)
+
+void makeMultAllignGeneticAlgo(char ** sequences, int seq_num , int seq_length)
 {
     int iterLimit = 1000, iterMade = 0;
-    initializePopulation(sequences);
+    Organism * = initializePopulation(sequences, seq_num, seq_length);
     modificatePopulation(sequences);
     calculateFitness();
     while(iterLimit >  iterMade)

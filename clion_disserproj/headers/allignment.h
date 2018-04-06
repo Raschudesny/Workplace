@@ -8,10 +8,18 @@
 #include "initialization.h"
 #include "modification.h"
 #include "fitnessCalculation.h"
+#include "main.h"
 
-void makeMultAllignGeneticAlgo(char ** sequences);
+void makeMultAllignGeneticAlgo(char ** sequences, int seq_num, int seq_length);
 
 
+
+
+typedef struct OrganismMatrix
+{
+    int ** matrix;
+    int size1, size2;
+} Organism;
 
 
 

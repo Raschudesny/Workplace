@@ -1,10 +1,10 @@
-//
 // Created by raschudesny on 29.03.18.
 //
 
+#include "../headers/main.h"
 #include "../headers/initialization.h"
 
-void swap(char* a, char * b)
+void my_swap(char* a, char * b)
 {
     if(*a == *b )
         return;
@@ -13,21 +13,40 @@ void swap(char* a, char * b)
     *a = t;
 }
 
+int ** freqMatrix(char ** s, int s_num, int s_len)
+{
+    for(int i = 0 ; i < s_num; i++)
+        for(int j = 0 ; j < s_len; j++)
+        {
+
+        }
+
+}
+
 
 //could work better if not S = seq then seq = S
 
-int*** initializePopulation(char ** seq)
+Organism *  initializePopulation(char ** seq, int seq_num, int seq_length)
 {
-    int lengthS = SEQ_LENGTH * SEQ_NUM;
+    Organism * population = (Organism *)malloc(sizeof(Organism) * 500);
+
+    int lengthS = seq_length * seq_num;
     char * S = (char *)malloc(sizeof(char) * lengthS);
-    for(int i = 0 ; i < SEQ_NUM; i++)
-        for(int j = 0 ; j < SEQ_LENGTH; j++)
-            S[i * SEQ_LENGTH + j] = seq[i][j];
+    for(int i = 0 ; i < seq_num; i++)
+        for(int j = 0 ; j < seq_length; j++)
+            S[i * seq_length + j] = seq[i][j];
 
     //shuffle
     srand(time(NULL));
     for(int i = 0; i < lengthS; i++ ) {
         int ran = rand() % lengthS;
-        swap(S[i], S[ran]);
+        my_swap(&S[i], &S[ran]);
     }
+
+    for(int i = 0 ; i < seq_num; i++)
+        for(int j = 0 ; j < seq_length; j++)
+            seq[i][j] = S[i * seq_length + j];
+
+    //for(int i = 0 ; )
+
 }
