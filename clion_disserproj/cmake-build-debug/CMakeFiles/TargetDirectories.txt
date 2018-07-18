@@ -1,3 +1,0 @@
-/home/raschudesny/workplace/disser/clion_disserproj/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/raschudesny/workplace/disser/clion_disserproj/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/raschudesny/workplace/disser/clion_disserproj/cmake-build-debug/CMakeFiles/clion_disserproj.dir
