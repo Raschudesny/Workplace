@@ -1,1 +1,5 @@
 dissertation_project/*
+chat/build/*
+chat/.idea/*
+chat/build
+chat/.idea
