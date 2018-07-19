@@ -5,6 +5,8 @@ chat/.gradle/*
 chat/build
 chat/.idea
 chat/.gradle
+chat/out/*
+chat/out
 EboBOT/.gradle/*
 EboBOT/build/*
 EboBOT/.idea/*
