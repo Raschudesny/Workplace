@@ -1,5 +1,13 @@
 dissertation_project/*
 chat/build/*
 chat/.idea/*
+chat/.gradle/*
 chat/build
 chat/.idea
+chat/.gradle
+EboBOT/.gradle/*
+EboBOT/build/*
+EboBOT/.idea/*
+EboBOT/build
+EboBOT/.idea
+EboBOT/.gradle
