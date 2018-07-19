@@ -1,7 +1,6 @@
 package danilo.laks;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +19,6 @@ import java.util.*;
 
 public class URLmapper {
 
-    private static final Logger log = LogManager.getLogger(URLmapper.class);
 
 
     @RequestMapping(
