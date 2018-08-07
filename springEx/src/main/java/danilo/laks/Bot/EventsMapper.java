@@ -1,16 +1,14 @@
-package danilo.laks;
+package danilo.laks.Bot;
 
-import com.sedmelluq.discord.lavaplayer.player.AudioPlayer;
-import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
-import com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager;
-import com.sedmelluq.discord.lavaplayer.source.AudioSourceManagers;
-import sx.blah.discord.api.events.Event;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import sx.blah.discord.api.events.EventSubscriber;
 import sx.blah.discord.handle.impl.events.ReadyEvent;
 import sx.blah.discord.handle.impl.events.guild.channel.message.MessageReceivedEvent;
 import sx.blah.discord.handle.obj.IMessage;
 import sx.blah.discord.handle.obj.IVoiceChannel;
-
+import sx.blah.discord.util.audio.AudioPlayer;
 
 
 import javax.sound.sampled.UnsupportedAudioFileException;
@@ -18,7 +16,6 @@ import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLConnection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -26,17 +23,22 @@ import java.util.Map;
 /**
  * Created by ChUd0 on 24.06.2018.
  */
+
+
 public class EventsMapper {
 
     private Map<String , Command>  commandMapping;
-    private EboBOT bot;
-    private AudioPlayerManager playerManager;
 
-    EventsMapper()
+    private EboBOT bot;
+    private AudioPlayer player;
+
+
+
+    public EventsMapper()
     {
+        System.out.println("made MAPPER");
         bot = new EboBOT();
-        playerManager = new DefaultAudioPlayerManager();
-        AudioSourceManagers.registerRemoteSources(playerManager);
+
 
         commandMapping = new HashMap<>();
 
@@ -62,35 +64,36 @@ public class EventsMapper {
             //EboBOT.sendMessage(event.getChannel(), attachList.get(0).getFilename());
         });
 
-        commandMapping.put("поставь музяку", (event) ->{
+        commandMapping.put("поставь музяку", (event) -> {
             IVoiceChannel botVoiceChannel = event.getClient().getOurUser().getVoiceStateForGuild(event.getGuild()).getChannel();
 
-            if(botVoiceChannel == null) {
+            if (botVoiceChannel == null) {
                 EboBOT.sendMessage(event.getChannel(), "Музыка не играла и фраер не танцевал (позови меня на канал сука)");
                 return;
             }
-            AudioPlayer player = playerManager.createPlayer();
+            if(player == null)
+                player = AudioPlayer.getAudioPlayerForGuild(event.getGuild());
+            else
+                player.clear();
 
             URL songURL = bot.getRandSong();
-            if(songURL == null)
-            {
+            if (songURL == null) {
                 EboBOT.sendMessage(event.getChannel(), "У меня пока нету музла для братвы");
                 return;
             }
 
-/*
+
             try {
-
-
                 File f = new File("src/main/resources/myzyaka.mp3");
-
+                player.queue(f);
             }
             catch (IOException e) {
                 e.printStackTrace();
                 EboBOT.sendMessage(event.getChannel(), "Я наебнулся =) (IO) ");
             } catch (UnsupportedAudioFileException e) {
                 e.printStackTrace();
-                EboBOT.sendMessage(event.getChannel(), "Я всё равно наебнулся =) (unsupported file) ");*/
+                EboBOT.sendMessage(event.getChannel(), "Я всё равно наебнулся =) (unsupported file) ");
+            }
         });
 
         commandMapping.put("залезай сюда", (event) -> {

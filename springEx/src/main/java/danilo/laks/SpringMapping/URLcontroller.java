@@ -1,6 +1,8 @@
-package danilo.laks;
+package danilo.laks.SpringMapping;
 
-
+import danilo.laks.Bot.EboBOT;
+import danilo.laks.Bot.EventsMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -9,15 +11,27 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
+import sx.blah.discord.api.IDiscordClient;
+import sx.blah.discord.api.events.EventDispatcher;
 
-import java.util.*;
+import java.util.Map;
 
-/**
- * Created by ChUd0 on 14.07.2018.
- */
 @Controller
+public class URLcontroller {
 
-public class URLmapper {
+
+
+    public URLcontroller()
+    {
+        System.out.println("meh");
+        IDiscordClient client = EboBOT.createClient(EboBOT.myToken, false);
+        EventDispatcher dispatcher = client.getDispatcher();
+        dispatcher.registerListener(new EventsMapper());
+        client.login();
+        System.out.println("Meh");
+    }
+
+
 
 
 
@@ -62,6 +76,7 @@ public class URLmapper {
     public ResponseEntity<String> chat()
     {
         System.out.println("SEE chat");
+
         return  ResponseEntity.ok().build();
     }
 
@@ -75,6 +90,4 @@ public class URLmapper {
 
         return  new ResponseEntity<String>(HttpStatus.OK);
     }
-
-
 }
