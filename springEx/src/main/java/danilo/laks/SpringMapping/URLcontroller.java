@@ -51,7 +51,9 @@ public class URLcontroller {
     public ResponseEntity<String> csgoStateChange(@RequestBody Map<String, Object> payload)
     {
         System.out.println("We get = " + payload.toString());
-        String currentRoundState = (String)payload.get("round");
+        String currentRoundState = payload.get("round").toString();
+        if(currentRoundState.length() <= 7)
+            return new ResponseEntity<String>( HttpStatus.OK);
         currentRoundState = currentRoundState.substring(7, currentRoundState.length() - 1);
         if(currentRoundState.equals(new String("over")))
         {
