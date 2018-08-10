@@ -6,3 +6,5 @@ springEx/.idea
 springEx/.gradle
 springEx/out/*
 springEx/out
+springEx/gradle*
+music

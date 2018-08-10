@@ -30,7 +30,11 @@ public class EventsMapper {
     private Map<String , Command>  commandMapping;
 
     private EboBOT bot;
-    private AudioPlayer player;
+
+    public EboBOT getBot()
+    {
+        return  bot;
+    }
 
 
 
@@ -39,53 +43,32 @@ public class EventsMapper {
         System.out.println("made MAPPER");
         bot = new EboBOT();
 
-
         commandMapping = new HashMap<>();
-
 
         //check test
         commandMapping.put("у нас труп", (event) -> {
             EboBOT.sendMessage(event.getChannel(), "По коням " );
-            //EboBOT.sendMessage(event.getChannel(), event.getGuild().toString());
         });
 
-        commandMapping.put("добавь в музло", (event) -> {
-            IMessage msg = event.getMessage();
-            List<IMessage.Attachment> attachList = msg.getAttachments();
-            IMessage.Attachment att = attachList.get(0);
-            try {
-                bot.addSong(att.getFilename(), new URL(att.getUrl()));
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-                System.out.println("MALFORMED URL");
-            }
-            EboBOT.sendMessage(event.getChannel(), "ебать, добавил в репертуар, от души, спасибо братишка");
-            //EboBOT.sendMessage(event.getChannel(), attachList.get(0).getUrl());
-            //EboBOT.sendMessage(event.getChannel(), attachList.get(0).getFilename());
-        });
 
         commandMapping.put("поставь музяку", (event) -> {
             IVoiceChannel botVoiceChannel = event.getClient().getOurUser().getVoiceStateForGuild(event.getGuild()).getChannel();
-
             if (botVoiceChannel == null) {
                 EboBOT.sendMessage(event.getChannel(), "Музыка не играла и фраер не танцевал (позови меня на канал сука)");
                 return;
             }
-            if(player == null)
-                player = AudioPlayer.getAudioPlayerForGuild(event.getGuild());
+            if(bot.getPlayer() == null)
+                bot.setPlayer(AudioPlayer.getAudioPlayerForGuild(event.getGuild()));
             else
-                player.clear();
+                bot.getPlayer().clear();
 
-            URL songURL = bot.getRandSong();
-            if (songURL == null) {
+            File newSong = bot.getRandSong();
+            if (newSong == null) {
                 EboBOT.sendMessage(event.getChannel(), "У меня пока нету музла для братвы");
                 return;
             }
-
-
             try {
-                File f = new File("src/main/resources/myzyaka.mp3");
-                player.queue(f);
+                bot.getPlayer().queue(newSong);
             }
             catch (IOException e) {
                 e.printStackTrace();
@@ -106,27 +89,31 @@ public class EventsMapper {
             userVoiceChannel.join();
         });
 
-        commandMapping.put("ухади", (event) -> {
+        commandMapping.put("съеби с канала", (event) -> {
             IVoiceChannel botVoiceChannel = event.getClient().getOurUser().getVoiceStateForGuild(event.getGuild()).getChannel();
             if(botVoiceChannel == null) {
                 EboBOT.sendMessage(event.getChannel(), "прежде чем выгонять с хаты, сам в неё зайди, фраер");
                 return;
             }
             botVoiceChannel.leave();
-
         });
+
+        commandMapping.put("ухади", (event) -> {
+            System.exit(0);
+        });
+
 
     }
 
 
     @EventSubscriber
-    public void onReadyEvent(ReadyEvent event) { // This method is called when the ReadyEvent is dispatched
-        System.out.println("pym pyrym"); // Will be called!
-
+    public void onReadyEvent(ReadyEvent event) {
+        System.out.println("Bot correctly connected to channel");
     }
 
 
 
+    //checks if message contains in commandlist
     @EventSubscriber
     public void onMessageReceivedEvent(MessageReceivedEvent MRevent) {
         IMessage message =  MRevent.getMessage();
@@ -137,10 +124,8 @@ public class EventsMapper {
             {
                 commandMapping.get(command).runCommand(MRevent);
             }
-
         }
-        //EboBOT.sendMessage(MRevent.getChannel(), "я ничего тебе не отвечаю, ибо:"  + content.substring(EboBOT.botPrefix.length()).trim());
-        System.out.println("pam param");
+
     }
 
 }

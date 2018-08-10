@@ -6,34 +6,22 @@ import sx.blah.discord.api.IDiscordClient;
 import sx.blah.discord.api.events.EventDispatcher;
 import sx.blah.discord.handle.obj.IChannel;
 import sx.blah.discord.util.DiscordException;
+import sx.blah.discord.util.audio.AudioPlayer;
 
+import java.io.File;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
 
 
 
 public class EboBOT {
-    //music library
-    private HashMap<String, URL> music;
 
-    public void addSong(String songName, URL songURL)
-    {
-        music.put(songName, songURL);
-    }
+    private ArrayList<File> playlist;
+    private AudioPlayer player;
 
-    public URL getRandSong()
-    {
-        if(music.isEmpty())
-            return null;
-        Random generator = new Random();
-        Object[] urls = music.values().toArray();
-        Object randomValue = urls[generator.nextInt(urls.length)];
-        return (URL)randomValue;
-    }
-
-
-    public static final String myToken = "NDYwNDQwNzM4Njc3OTE1NjU5.DjLnvQ.WtxxLWadBJWDkEsIUD5rD6yAw00";
+    public static final String myToken = "";
     public static final String botPrefix = "Андрюха, ";
 
     //Bot functionality
@@ -58,17 +46,38 @@ public class EboBOT {
         channel.sendMessage(msg);
     }
 
-
-
     public EboBOT()
     {
-        System.out.println("Init BOT creation");
-        music = new HashMap<>();
+        playlist = listFolderFiles(new File("music"));
         System.out.println("Complete bot creation");
-
     }
 
+    public File getRandSong()
+    {
+        if(playlist.isEmpty())
+            return null;
+        Random generator = new Random();
+        int randIndex = generator.nextInt(playlist.size());
+        return playlist.get(randIndex);
+    }
 
+    public ArrayList<File> listFolderFiles(File folder) {
+        ArrayList<File> filesList = new ArrayList<File>();
+        for (File file : folder.listFiles()) {
+            if (file.isDirectory()) {
+                filesList.addAll(listFolderFiles(file));
+            } else {
+                filesList.add(file);
+            }
+        }
+        return filesList;
+    }
 
+    public AudioPlayer getPlayer() {
+        return player;
+    }
 
+    public void setPlayer(AudioPlayer player) {
+        this.player = player;
+    }
 }
