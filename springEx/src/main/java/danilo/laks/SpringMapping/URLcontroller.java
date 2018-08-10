@@ -19,6 +19,7 @@ import sx.blah.discord.util.audio.AudioPlayer;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import java.io.File;
 import java.io.IOException;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -50,11 +51,19 @@ public class URLcontroller {
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<String> csgoStateChange(@RequestBody Map<String, Object> payload)
     {
+        LinkedHashMap roundStatus;
         System.out.println("We get = " + payload.toString());
-        String currentRoundState = payload.get("round").toString();
-        if(currentRoundState.length() <= 7)
+        if(payload.containsKey("round"))
+            roundStatus = (LinkedHashMap) payload.get("round");
+        else
             return new ResponseEntity<String>( HttpStatus.OK);
-        currentRoundState = currentRoundState.substring(7, currentRoundState.length() - 1);
+
+        String currentRoundState;
+        if(roundStatus.containsKey("phase"))
+            currentRoundState = roundStatus.get("phase").toString();
+        else
+            return new ResponseEntity<String>( HttpStatus.OK);
+        
         if(currentRoundState.equals(new String("over")))
         {
             List<IGuild> guilds = client.getGuilds();
