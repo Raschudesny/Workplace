@@ -16,6 +16,7 @@ import sx.blah.discord.handle.obj.IGuild;
 import sx.blah.discord.handle.obj.IVoiceChannel;
 import sx.blah.discord.util.audio.AudioPlayer;
 
+import javax.annotation.PostConstruct;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import java.io.File;
 import java.io.IOException;
@@ -28,21 +29,19 @@ public class URLcontroller {
 
     private IDiscordClient client;
     private EventDispatcher dispatcher;
+
+    @Autowired
     private EventsMapper eventsMapper;
 
-    public URLcontroller()
+    @PostConstruct
+    public void botInitialization()
     {
         client = EboBOT.createClient(EboBOT.myToken, false);
         dispatcher = client.getDispatcher();
-        eventsMapper = new EventsMapper();
         dispatcher.registerListener(eventsMapper);
         client.login();
 
     }
-
-
-
-
 
     @RequestMapping(
             path = "csgo",
@@ -63,7 +62,7 @@ public class URLcontroller {
             currentRoundState = roundStatus.get("phase").toString();
         else
             return new ResponseEntity<String>( HttpStatus.OK);
-        
+
         if(currentRoundState.equals(new String("over")))
         {
             List<IGuild> guilds = client.getGuilds();
@@ -92,9 +91,7 @@ public class URLcontroller {
                 } catch (UnsupportedAudioFileException e) {
                     e.printStackTrace();
                 }
-
             }
-
         }
         return  new ResponseEntity<String>( HttpStatus.OK);
     }

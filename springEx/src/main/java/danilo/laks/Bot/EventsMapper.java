@@ -2,6 +2,7 @@ package danilo.laks.Bot;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import sx.blah.discord.api.events.EventSubscriber;
 import sx.blah.discord.handle.impl.events.ReadyEvent;
@@ -24,11 +25,11 @@ import java.util.Map;
  * Created by ChUd0 on 24.06.2018.
  */
 
-
+@Service
 public class EventsMapper {
 
     private Map<String , Command>  commandMapping;
-
+    @Autowired
     private EboBOT bot;
 
     public EboBOT getBot()
@@ -41,8 +42,9 @@ public class EventsMapper {
     public EventsMapper()
     {
         System.out.println("made MAPPER");
-        bot = new EboBOT();
-
+        //bot = new EboBOT();
+        System.out.println("everything alright");
+        System.out.flush();
         commandMapping = new HashMap<>();
 
         //check test

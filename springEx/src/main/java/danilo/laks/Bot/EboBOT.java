@@ -1,5 +1,6 @@
 package danilo.laks.Bot;
 
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import sx.blah.discord.api.ClientBuilder;
 import sx.blah.discord.api.IDiscordClient;
@@ -15,7 +16,7 @@ import java.util.HashMap;
 import java.util.Random;
 
 
-
+@Service
 public class EboBOT {
 
     private ArrayList<File> playlist;
